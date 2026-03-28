@@ -49,6 +49,10 @@ img {
     color: navy;
     vertical-align: middle;
 }
+
+img {
+    width: 300px;
+}
 /* uncomment the code below to set the grid */
 
 /*#grid {
