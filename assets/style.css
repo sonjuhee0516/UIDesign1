@@ -41,6 +41,13 @@ img {
     color: navy;
     vertical-align: middle;
 }
+
+.desc {
+	font-family: Helvetica;
+    font-size: 30px;
+    color: navy;
+    vertical-align: middle;
+}
 /* uncomment the code below to set the grid */
 
 /*#grid {
