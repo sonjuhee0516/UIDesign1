@@ -35,6 +35,12 @@ img {
 	height:  auto;
 }
 
+.dropcap {
+    font-family: cursive;
+    font-size: 60px;
+    color: crimson;
+    vertical-align: middle;
+}
 /* uncomment the code below to set the grid */
 
 /*#grid {
