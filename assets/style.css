@@ -4,23 +4,37 @@
 	box-sizing: border-box;
 }
 
-/* adjusting fonts */
+@font-face {
+	font-family: 'titlefont';
+	src: url('ClashDisplay-Variable.ttf');
+}
+
+@font-face {
+	font-family: 'bodyfont';
+	src: url('ClashDisplay-Regular.otf');
+}
+
+@font-face {
+	font-family: 'highlight';
+	src: url('ClashDisplay-Medium.otf');
+}
 
 body {
-	background-color: #d2dafe;
+	background-color: #ffffff;
 	font-family: -apple-system, BlinkMacSystemFont, helvetica, arial, sans-serif;
 	transition: background 500ms ease;
 }
 
 p, li {
-	font-size:  22px;
+	font-size:  20px;
 	line-height: 30px;
+	font-family: bodyfont;
 }
 
 /* adjusting spacing */
 
 #left-column {
-	padding: 20px;
+	padding: 50px;
 }
 
 h1, p {
@@ -28,31 +42,60 @@ h1, p {
 }
 
 ul, ol {
-	margin-left: 20px;
+	list-style: none;
 }
 
-img {
-	max-width: 100%;
-	height:  auto;
+
+h3, p {
+	font-size: 20px;
+	font-family: highlight;
+	margin-top: 30px;
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: 100vh; 
+  width: 100vw;
+  overflow: hidden;
+}
+
+#right-column {
+  display: flex;
+  overflow-y: auto;
+  flex-direction: column;
+  height: 100vh;           /* 화면 높이를 꽉 채움 */
+  padding: 50px;       /* 세로로 나열 */
+  gap: 30px;                     /* 사진 사이 간격 */
+}
+
+#right-column img {
+  width: 30%;                   /* 박스 너비에 맞춤 */
+  height: auto;                  /* 비율 유지 */
 }
 
 .dropcap {
-    font-family: Helvetica;
-    font-size: 60px;
-    color: navy;
-    vertical-align: middle;
+    font-family: titlefont;
+    font-size: 80px;
+    color: black;
+    vertical-align: top;
 }
 
 .desc {
-	font-family: Helvetica;
+	font-family: highlight;
     font-size: 30px;
-    color: navy;
+    color: black;
     vertical-align: middle;
 }
 
 img {
-    width: 300px;
+  width: 500px;
+  position: absolute;
+  top: 20px;    /* 위에서 20px만큼 내려옴 */
+  right: 20px;  /* 오른쪽에서 20px만큼 들어옴 */
 }
+
+
 /* uncomment the code below to set the grid */
 
 /*#grid {

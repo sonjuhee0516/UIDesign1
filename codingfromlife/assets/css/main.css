@@ -1,0 +1,829 @@
+body {
+	background: #ffffff;
+}
+
+@font-face {
+	font-family: 'highlight';
+	src: url('ClashDisplay-Medium.otf');
+}
+
+h3, p {
+	font-size: 20px;
+	font-family: highlight;
+	margin-top: 0;
+}
+
+ul, li {
+	font-size: 20px;
+	font-family: highlight;
+	list-style: none;
+	padding-left: 0;
+	margin-top: 0;
+}
+
+#align {
+	display: flex;
+  align-items: center;
+  justify-content: center;	
+  height: 100vh;
+}
+
+#stage {
+	width: 900px;
+	height: 556px;
+	margin: auto;
+	background: #e4ebe9;
+	position: relative;
+}
+
+#table{
+	width: 0;
+	height: 0;
+	border-left: 450px solid transparent;
+	border-right: 450px solid transparent;
+	border-bottom: 180px solid #f7f7f2;
+	position: absolute;
+	top: 376px;
+	z-index: 1;
+	pointer-events: none;
+}
+
+#vasetop {
+	width: 80px;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 20px solid #ffffff;
+	position: absolute;
+	top: 250px;
+	left: 400px;
+	z-index: 40;
+}
+
+#vasemiddle {
+	width: 80px;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-bottom: 60px solid #ffffff;
+	position: absolute;
+	top: 270px;
+	left: 390px;
+	z-index: 40;
+}
+
+#vasesquare {
+	width: 120px;
+	height: 60px;
+	background: white;
+	top: 330px;
+	left: 390px;
+	position: absolute;
+	z-index: 40;
+}
+
+#vasebottom {
+	width: 70px;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-top: 90px solid #ffffff;
+	position: absolute;
+	top: 390px;
+	left: 390px;
+	z-index: 40;
+}
+
+	/* uncomment to add keyframe animation */
+	/* animation: spin 2s infinite; */
+
+#frame {
+	width: 50px;
+	height: 120px;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	
+	background-color: white;
+	transform: skewY(-15deg) rotate(-10deg);
+	position: absolute;
+	top: 340px;
+	left: 280px;
+	z-index: 30;
+}
+
+#frame2 {
+	width: 70px;
+	height: 140px;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	
+	background-color: #dddd63;
+	transform: skewY(-15deg) rotate(-10deg);
+	position: absolute;
+	top: 330px;
+	left: 270px;
+	z-index: 29;
+}
+
+#frameleg {
+	width: 5px;
+	height: 40px;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+
+	background-color: #8e6642;
+	transform: skewY(-40deg) rotate(-5deg);
+	position: absolute;
+	top: 410px;
+	left: 265px;
+	z-index: 28;
+}
+
+#wall {
+	width: 450px;
+	height: 556px;
+	background: #d5e0dd;
+	position: absolute;
+	left: 0px;
+	z-index: 0;
+}
+
+#calender {
+	width: 110px;
+	height: 100px;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	
+	background-color: #ffffff;
+	transform: skewY(15deg) rotate(10deg);
+	position: absolute;
+	top: 370px;
+	left: 550px;
+	z-index: 20;
+
+}
+
+#calender2 {
+	width: 105px;
+	height: 110px;
+	border-left: 15px solid transparent;
+	border-right: 15px solid transparent;
+	
+	background-color: #3746b8;
+	transform: skewY(15deg) rotate(10deg);
+	position: absolute;
+	top: 375px;
+	left: 555px;
+	z-index: 19;
+
+}
+
+#calender3 {
+	width: 0;
+	height: 0;
+	border-left: 20px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 110px solid #3746b8;
+	position: absolute;
+	top: 401px;
+	left: 679px;
+	z-index: 18;
+}
+
+#stem1 {
+	width: 7px;
+	height: 200px;
+	background-color: #98da2e;
+	position: absolute;
+	top: 120px;
+	left: 440px;
+	z-index: 10;
+}
+
+#stem2 {
+	width: 7px;
+	height: 200px;
+	background-color: #82af3a;
+	position: absolute;
+	top: 200px;
+	left: 420px;
+	transform: rotate(-15deg);
+	z-index: 10;
+}
+
+#stem3 {
+	width: 7px;
+	height: 200px;
+	background-color: #82af3a;
+	position: absolute;
+	top: 200px;
+	left: 460px;
+	transform: rotate(10deg);
+	z-index: 10;
+}
+
+#stem4 {
+	width: 7px;
+	height: 200px;
+	background-color: #98da2e;
+	position: absolute;
+	top: 160px;
+	left: 420px;
+	transform: rotate(-5deg);
+	z-index: 10;
+}
+
+#stem5 {
+	width: 7px;
+	height: 200px;
+	background-color: #98da2e;
+	position: absolute;
+	top: 140px;
+	left: 460px;
+	transform: rotate(5deg);
+	z-index: 10;
+}
+
+#stem6 {
+	width: 7px;
+	height: 200px;
+	background-color: #98da2e;
+	position: absolute;
+	top: 180px;
+	left: 480px;
+	transform: rotate(7deg);
+	z-index: 10;
+}
+
+#stem7 {
+	width: 7px;
+	height: 200px;
+	background-color: #82af3a;
+	position: absolute;
+	top: 180px;
+	left: 440px;
+	transform: rotate(-7deg);
+	z-index: 10;
+}
+
+#flower1 {
+	width: 40px;
+	height: 40px;
+	background: #ffda79; 
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 100px;  /* 줄기 끝 위치 */
+	left: 425px; /* 줄기 중앙 위치 */
+	position: absolute;
+	transform: rotate(-45deg);
+	z-index: 50;
+}
+
+#flower2 {
+	width: 20px;
+	height: 20px;
+	background: #ffffff;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 160px;
+	left: 405px;
+	position: absolute;
+	z-index: 51;
+}
+
+#flower3 {
+	width: 20px;
+	height: 20px;
+	background: #ffffff;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 150px;
+	left: 400px;
+	position: absolute;
+	z-index: 51;
+}
+
+#flower4 {
+	width: 20px;
+	height: 20px;
+	background: #ffffff;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 140px;
+	left: 395px;
+	position: absolute;
+	z-index: 51;
+}
+
+#flower5 {
+	width: 60px;
+	height: 60px;
+	background: #fac6cd;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 150px;
+	left: 400px;
+	position: absolute;
+	transform: rotate(-45deg);
+	z-index: 51;
+}
+
+#flower6 {
+	width: 40px;
+	height: 40px;
+	background: #ffda79; 
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 100px;  /* 줄기 끝 위치 */
+	left: 425px; /* 줄기 중앙 위치 */
+	position: absolute;
+	z-index: 50;
+}
+
+#flower7 {
+	width: 60px;
+	height: 60px;
+	background: #fac6cd;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 150px;
+	left: 400px;
+	position: absolute;
+	z-index: 51;
+}
+
+#flower8 {
+	width: 30px;
+	height: 30px;
+	background: #ffffff;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 165px;
+	left: 415px;
+	position: absolute;
+	transform: rotate(-45deg);
+	z-index: 52;
+}
+
+#flower9 {
+	width: 30px;
+	height: 30px;
+	background: #ffffff;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 165px;
+	left: 415px;
+	position: absolute;
+	z-index: 52;
+}
+
+#flower10 {
+	width: 50px;
+	height: 50px;
+	background: #f6d4f6;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 125px;
+	left: 445px;
+	position: absolute;
+	transform: rotate(-45deg);
+	z-index: 52;
+}
+
+#flower11 {
+	width: 20px;
+	height: 20px;
+	background: #ffffff;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 140px;
+	left: 460px;
+	position: absolute;
+	transform: rotate(-45deg);
+	z-index: 52;
+}
+
+#flower12 {
+	width: 40px;
+	height: 40px;
+	background: #ffffff;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 180px;
+	left: 375px;
+	position: absolute;
+	transform: rotate(-45deg);
+	z-index: 52;
+}
+
+#flower13 {
+	width: 40px;
+	height: 40px;
+	background: #ffffff;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 180px;
+	left: 375px;
+	position: absolute;
+	z-index: 52;
+}
+
+#flower14 {
+	width: 15px;
+	height: 15px;
+	background: #ffda79;
+	border-radius: 15px;
+	top: 192px;
+	left: 387px;
+	position: absolute;
+	z-index: 53;
+}
+
+#flower15 {
+	width: 40px;
+	height: 40px;
+	background: #f5a7bd;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 180px;
+	left: 460px;
+	position: absolute;
+	z-index: 54;
+}
+
+#flower16 {
+	width: 40px;
+	height: 40px;
+	background: #ffffff;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 210px;
+	left: 390px;
+	position: absolute;
+	transform: rotate(-45deg);
+	z-index: 52;
+}
+
+#flower17 {
+	width: 40px;
+	height: 40px;
+	background: #ffffff;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 210px;
+	left: 390px;
+	position: absolute;
+	z-index: 52;
+}
+
+#flower18 {
+	width: 15px;
+	height: 15px;
+	background: #ffda79;
+	border-radius: 15px;
+	top: 220px;
+	left: 400px;
+	position: absolute;
+	z-index: 53;
+}
+
+#flower19 {
+	width: 40px;
+	height: 40px;
+	background: #f5a7bd;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 180px;
+	left: 460px;
+	position: absolute;
+	transform: rotate(-45deg);
+	z-index: 54;
+}
+
+#flower20 {
+	width: 20px;
+	height: 20px;
+	background: #ffffff;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 230px;
+	left: 440px;
+	position: absolute;
+	z-index: 52;
+}
+
+#flower21 {
+	width: 20px;
+	height: 20px;
+	background: #ffffff;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 220px;
+	left: 445px;
+	position: absolute;
+	z-index: 52;
+}
+
+#flower22 {
+	width: 20px;
+	height: 20px;
+	background: #ffffff;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 210px;
+	left: 450px;
+	position: absolute;
+	z-index: 52;
+}
+
+#flower23 {
+	width: 40px;
+	height: 40px;
+	background: #e9c0f1;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 160px;
+	left: 480px;
+	position: absolute;
+	transform: rotate(-45deg);
+	z-index: 52;
+}
+
+#flower24 {
+	width: 20px;
+	height: 20px;
+	background: #ffffff;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 170px;
+	left: 490px;
+	position: absolute;
+	transform: rotate(-45deg);
+	z-index: 52;
+}
+
+#flower25 {
+	width: 10px;
+	height: 10px;
+	background: #ffffff;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 140px;
+	left: 350px;
+	position: absolute;
+	transform: rotate(-45deg);
+	z-index: 52;
+}
+
+#flower26 {
+	width: 10px;
+	height: 10px;
+	background: #ffffff;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 150px;
+	left: 360px;
+	position: absolute;
+	transform: rotate(-45deg);
+	z-index: 52;
+}
+
+#flower27 {
+	width: 10px;
+	height: 10px;
+	background: #ffffff;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 155px;
+	left: 365px;
+	position: absolute;
+	transform: rotate(-45deg);
+	z-index: 52;
+}
+
+#flower28 {
+	width: 10px;
+	height: 10px;
+	background: #ffffff;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 160px;
+	left: 368px;
+	position: absolute;
+	transform: rotate(-45deg);
+	z-index: 52;
+}
+
+#flower29 {
+	width: 10px;
+	height: 10px;
+	background: #ffffff;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 80px;
+	left: 490px;
+	position: absolute;
+	transform: rotate(-45deg);
+	z-index: 52;
+}
+
+#flower30 {
+	width: 10px;
+	height: 10px;
+	background: #ffffff;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 85px;
+	left: 485px;
+	position: absolute;
+	transform: rotate(-45deg);
+	z-index: 52;
+}
+
+#flower31 {
+	width: 10px;
+	height: 10px;
+	background: #ffffff;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 90px;
+	left: 480px;
+	position: absolute;
+	transform: rotate(-45deg);
+	z-index: 52;
+}
+
+#flower32 {
+	width: 10px;
+	height: 10px;
+	background: #ffffff;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 95px;
+	left: 477px;
+	position: absolute;
+	transform: rotate(-45deg);
+	z-index: 52;
+}
+
+#flower33 {
+	width: 10px;
+	height: 10px;
+	background: #ffffff;
+	
+
+	clip-path: polygon(50% 0%, 65% 35%, 100% 50%, 65% 65%, 50% 100%, 35% 65%, 0% 50%, 35% 35%);
+	
+	top: 100px;
+	left: 475px;
+	position: absolute;
+	transform: rotate(-45deg);
+	z-index: 52;
+}
+
+#stem8 {
+	width: 3px;
+	height: 200px;
+	background-color: #82af3a;
+	position: absolute;
+	top: 140px;
+	left: 420px;
+	transform: rotate(-33deg);
+	z-index: 10;
+}
+
+#stem9 {
+	width: 3px;
+	height: 50px;
+	background-color: #82af3a;
+	position: absolute;
+	top: 105px;
+	left: 472px;
+	transform: rotate(15deg);
+	z-index: 10;
+}
+
+.my-photo {
+    width: 300px;
+    height: auto;
+    position: static; 
+    display: block; 
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px; 
+    margin-bottom: 20px;
+  }
+
+h1, p {
+	font-size: 50px;
+	font-family: highlight;
+	position: relative;
+  z-index: 1000;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 0;
+  color: black;
+}
+
+h2, p {
+	font-size: 50px;
+	font-family: highlight;
+	margin-top: 0;
+	position: relative;
+  z-index: 1000;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 0;
+  color: black;
+}
+	/* uncomment for css transitions */
+	/* transition: all 400ms ease; */
+}
+
+/* animations */
+
+/*
+#clip:hover {
+	transform: rotate(1200deg);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+@keyframes move {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(100px);
+  }
+}
+
+*/
