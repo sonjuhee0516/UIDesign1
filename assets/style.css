@@ -95,6 +95,21 @@ img {
   right: 20px;  /* 오른쪽에서 20px만큼 들어옴 */
 }
 
+ul li a {
+	text-decoration: none;
+	color: #000000;         /* 글자 색상을 검은색으로 통일 (원하는 색상으로 변경 가능) */
+	display: inline-block; 
+	transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1),
+	color 0.3s ease;
+}
+
+/* 2. 마우스를 올렸을 때(Hover) 효과 */
+ul li a:hover {
+	transform: scale(1.05);  /* 글자 크기만 깔끔하게 10% 확대 (너무 크면 1.05로 줄이셔도 됩니다) */
+	color: #43fafe;
+}
+
+
 
 /* uncomment the code below to set the grid */
 
