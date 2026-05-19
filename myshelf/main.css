@@ -59,6 +59,30 @@ h3 {
 	text-align: right;
 }
 
+h4 {
+	position: fixed;
+	top: 300px;
+	right: 40px;
+	font-size: 18px;
+	font-family: highlight;
+	text-align: right;
+}
+
+ul li {
+	position: fixed;
+	top: 300px;
+	margin-top: 20px;
+	right: 20px;
+	list-style: none;
+	text-decoration: none;
+	font-size: 18px;
+	font-family: text;
+	text-align: right;
+	padding: 7px 20px;
+	background: white;
+	border-radius: 20px;
+}
+
 #bookcase {
 	width: 1200px;
 	height: 2000px;
